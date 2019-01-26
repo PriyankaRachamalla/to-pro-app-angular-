@@ -1,0 +1,34 @@
+.contact-us-heading{
+    text-align: center;
+    margin: 4%;
+}
+.phnum{
+    font-weight: bold;
+    color: red;
+}
+.serviceFrmLbls{
+    width: 20%;
+}
+.serviceFrmInputs{
+    width: 40%;
+}
+.request-form{
+    margin: 5%;
+}
+.input-div{
+    margin: 2% 0%;
+}
+.contact-us-bg{
+    height:auto;
+    background: url('../../assets/images/contact_icon.png') no-repeat;
+    background-size: 100% 100%;
+}
+.contact-div1{
+    padding: 2% 0%;
+}
+.send-button{
+    // float: right;
+    margin-left: 48%;
+    border-radius: 25px;
+    background: aqua;
+}

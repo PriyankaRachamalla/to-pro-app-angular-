@@ -1,0 +1,51 @@
+.formlbls.fname, .formlbls.lname{
+    width: 45%;
+}
+.formlbls{
+    width: 22%;
+}
+.forminputs.fnameipt, .forminputs.lnameipt{
+    width: 45%;
+}
+.forminputs{
+    width: 72%;
+}
+.name-div{
+    padding-left: 0px;
+}
+.input-div{
+    margin: 1% 0%;
+}
+.booking-heading{
+    text-align: center;
+    margin: 4%;
+}
+form{
+    margin-bottom:4%; 
+}
+.confirm-btn{
+    font-size: 20px;
+    // float: right;
+    margin-left: 82%;
+    clear: both;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 130px;
+    color: black;
+    background: aquamarine;
+    font-weight: bold;
+}
+.summary-list-item{
+    margin: 2% 0%;
+}
+.summary-list{
+    border: 1px solid;
+    padding: 5%;
+    // text-align: center;
+}
+.book-btn{
+    border-radius:25px;
+    margin-left: 40%;
+    background: aqua; 
+    margin-bottom: 20px;
+}

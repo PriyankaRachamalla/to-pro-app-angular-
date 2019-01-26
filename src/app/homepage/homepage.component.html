@@ -1,0 +1,99 @@
+<!-- <nav role="navigation">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo"><img width="250px" src='./../../assets/images/logo.JPG'/></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/about-us">About Us</a></li>
+      <li><a routerLink="/services">Services</a></li>
+      <li><a routerLink="/contact-us">Contact Us</a></li>
+      <li><a routerLink="/book-your-slot">book-your-slot</a></li>
+      <li><i class="material-icons left">phone</i>0426536671</li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact Us</a></li>
+
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/"><img width="250px" src='./../../assets/images/logo-pro.png'/></a>
+  <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about-us">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact-us">Contact Us</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/book-your-slot">Book Your Slot</a>
+      </li> -->
+      <li class="nav-item nav-contact">
+        
+        <Span class="ph-icon"><i class="fa fa-phone"></i></Span>
+        <span class="ph-num">0426536671</span>
+        <!-- <p>
+        <Span><i class="fa fa-envelope"></i></Span>
+        <span>info@2procleaningservices.com</span></p> -->
+      </li>
+    </ul>
+  </div>
+</nav>
+<div>
+  
+  <router-outlet></router-outlet>
+</div>
+
+
+
+<footer class="page-footer teal footer-div">
+  <div class="container">
+    <div class="row footer-links">
+      <div class="col-sm-4">
+        <h5 class="footer-headings nav-links-footer">Nav Links</h5>
+        <ul>
+          <li><a routerLink="/about-us">Office Cleaning Services</a></li>
+          <li><a routerLink="/about-us">Educational Cleaning Services</a></li>
+          <li><a routerLink="/about-us">Hospitality Cleaning Services</a></li>
+          <li><a routerLink="/about-us">Retail Cleaning Services</a></li>
+          <li><a routerLink="/about-us">Builders Cleaning Services</a></li>
+          <li><a routerLink="/about-us">Stream Carpet Cleaning</a></li>
+          <li><a routerLink="/about-us">Window Cleaning</a></li>
+          <li><a routerLink="/about-us">Oven and Refrigerator Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <h5 class="footer-headings">Contact Us</h5>
+        <div>
+          <p><span class="footer-icons"><i class="fa fa-globe"></i></span><span>2procleaningservices.com</span></p>
+          <p><span class="footer-icons"><i class="fa fa-envelope"></i></span><span>info@2procleaningservices.com</span></p>
+          <p><span class="footer-icons"><i class="fa fa-phone"></i></span><span>0426536671</span></p>
+        </div>
+      </div>
+      <!-- <div class="col-sm-4">
+        <h5 class="footer-headings">2 PRO CLEANING SERVICES</h5>
+        <p>
+          jsadfuysaytufsauybcbts
+        </p>
+      </div> -->
+      
+    </div>
+    <div class="copyright-div">Copyright © 2019 2ProCleaningServices — All Rights Reserved.</div>
+  </div>
+  
+</footer>

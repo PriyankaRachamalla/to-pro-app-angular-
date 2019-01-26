@@ -1,0 +1,41 @@
+.aboutus{
+    height:300px;
+    background: url('../../assets/images/aboutus.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.aboutus-heading{
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+}
+.aboutus-tagline{
+    display: block;
+    margin-left: 40%;
+}
+.aboutus-text{
+    font-size: 20px;
+    color: white;
+}
+.aboutus-headtext{
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    text-decoration: underline;
+    margin: 4%;
+}
+.aboutus-heading-div{
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.why2pro-points{
+    font-weight: bold;
+}
+.working-text{
+    text-align: justify;
+}
+.howitworks-bg{
+    // height:300px;
+    background: url('../../assets/images/howItWorks.jpg') no-repeat;
+    background-size: 100% 100%;
+}

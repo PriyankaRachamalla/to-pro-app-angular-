@@ -1,0 +1,141 @@
+<div class="container">
+  <h3 class="booking-heading">Schedule Your Booking</h3>
+  <div *ngIf="showForm">
+    <form #userForm="ngForm">
+      <div class="form-div">
+        <div class="row input-div">
+          <div class="col-sm-6 name-div">
+            <label class="formlbls fname">First Name</label>
+            <input class="forminputs fnameipt" type="text" name="firstName" [(ngModel)]="formElements.firstName.value"/>
+          </div>
+          <div class="col-sm-6">
+            <label class="formlbls lname">Last Name</label>
+            <input class="forminputs lnameipt" type="text" name="lastName" [(ngModel)]="formElements.lastName.value" />
+          </div>
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Email</label>
+          <input class="forminputs" type="email" name="email" [(ngModel)]="formElements.email.value" />
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Phone Number</label>
+          <input class="forminputs" type="text" name="PhoneNumber" [(ngModel)]="formElements.phoneNum.value" />
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Address</label>
+          <textarea class="forminputs" name="address" [(ngModel)]="formElements.address.value"></textarea>
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Postal Code</label>
+          <input class="forminputs" type="number" name="postalCode" [(ngModel)]="formElements.postalCode.value" />
+        </div>
+      </div>
+      <div>
+        <div class="row input-div input-field">
+            <label class="formlbls">Type of Cleaning</label>
+            <div class="frmInputs singleSelect">
+                <dropdownselect [myOptions]="formElements?.cleaningType?.options" [mySettings]="formElements?.cleaningType?.settings" [myTexts]="formElements?.cleaningType?.texts"
+                [optionsModel]="formElements?.cleaningType?.optionsModel" (notify)='formElements?.cleaningType?.onChange($event)'
+                >
+              </dropdownselect>
+            </div>
+            
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Property Details</label>
+          <input type="radio" value="House" name="property" [ngModel]="property" required #property="ngModel"> House
+          <input type="radio" value="Apartment" name="property" [ngModel]="property" required #property="ngModel"> Apartment
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Number of Bathrooms</label>
+          <input class="forminputs" type="number" name="NumOfBathrooms" [(ngModel)]="formElements.numOfBathrooms.value" />
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Number of Bedrooms</label>
+          <input class="forminputs" type="number" name="NumOfBedrooms" [(ngModel)]="formElements.numOfBedrooms.value" />
+        </div>
+      </div>
+      <div>
+        <div class="row input-div">
+          <label class="formlbls">Are you confirming the above provided details are true?</label> 
+          <input type="radio" value="Yes" name="confirmDetails" [ngModel]="confirmDetails" required #confirmDetails="ngModel"> Yes
+          <input type="radio" value="No" name="confirmDetails" [ngModel]="confirmDetails" required #confirmDetails="ngModel"> No
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Any Other Special Cleanings?</label>
+          <textarea class="forminputs" name="specialCleanings" [(ngModel)]="formElements.specialCleanings.value"></textarea>
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Preferred Start Date</label>
+          <input class="forminputs" type="date" name="startDate" [(ngModel)]="formElements.startDate.value" />
+        </div>
+        <div class="row input-div">
+          <label class="formlbls">Any Instructions for Cleaners?</label>
+          <textarea class="forminputs" name="instructionsForCleaners" [(ngModel)]="formElements.instructionsForCleaners.value"></textarea>
+        </div>
+      </div>
+      <button class="btn confirm-btn" (click)="confirm(userForm)">Proceed</button>
+    </form>
+  </div>
+  <div *ngIf="!showForm">
+    <h5 class="aboutus-headtext">Order Summary</h5>
+       
+      <div class="col-md-8">
+        <ul class="summary-list">
+            <li class="row summary-list-item">
+                <div class="col-md-5">First Name</div>
+                <div class="col-md-7">{{bookingInfo.firstName}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Last Name</div>
+                <div class="col-md-7">{{bookingInfo.lastName}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Email</div>
+                <div class="col-md-7">{{bookingInfo.email}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Phone Number</div>
+                <div class="col-md-7">{{bookingInfo.phoneNum}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Address</div>
+                <div class="col-md-7">{{bookingInfo.address}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Postal Code</div>
+                <div class="col-md-7">{{bookingInfo.postalCode}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">What Type of Cleaning?</div>
+                <div class="col-md-7">{{bookingInfo.cleaningType}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Property Details</div>
+                <div class="col-md-7">{{bookingInfo.propertyDetails}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Number of Bathrooms?</div>
+                <div class="col-md-7">{{bookingInfo.numOfBathrooms}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Number of Bedrooms?</div>
+                <div class="col-md-7">{{bookingInfo.numOfBedrooms}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Any Other Special Cleanings?</div>
+                <div class="col-md-7">{{bookingInfo.specialCleanings}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Preferred Start Date</div>
+                <div class="col-md-7">{{bookingInfo.startDate}}</div>
+            </li>
+            <li class="summary-list-item row">
+                <div class="col-md-5">Instructions for Cleaners</div>
+                <div class="col-md-7">{{bookingInfo.instructionsForCleaners}}</div>
+            </li>
+          </ul>
+          <button class="btn book-btn" (click)="bookNow()">Book Now</button>
+      </div>
+  </div>
+</div>

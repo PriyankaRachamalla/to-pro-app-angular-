@@ -1,0 +1,31 @@
+.main_heading{
+    color: white;
+    text-align: center;
+    padding-top: 6%; 
+    .heading1{
+        font-weight: bold;
+    }
+    .btn-width button{
+        background-color: aliceblue;
+        border-radius: 30px;
+        width: 14%;
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 30px;
+    }
+    .btn-width{
+        width: 100%;
+    }
+}
+.home-main-img{
+    height: 350px;
+    background: url('../../assets/images/bg1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.home-page-text{
+    margin: 4%;
+    padding: 2%;
+    text-align: justify;
+    border: 1px solid;
+    border-radius: 25px;
+}
