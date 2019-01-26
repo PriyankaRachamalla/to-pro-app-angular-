@@ -43,7 +43,7 @@
     var app = express();
     app.engine('html', require('ejs').renderFile);
 
-    var public = path.join(__dirname, 'app');
+    var public = path.join(__dirname, 'dist');
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
@@ -53,7 +53,7 @@ app.get('/', function(req, res) {
 app.use('/', express.static(public));
     // app.set('view engine', 'ejs');
     app.set('view engine', 'html');
-    app.set('views', 'src')
+    app.set('views', 'dist/to-pro-app/')
 
    // app.use(express.static('public'));
     app.use(bodyParser.urlencoded({extended: true}));
